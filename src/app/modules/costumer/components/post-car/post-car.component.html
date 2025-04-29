@@ -1,0 +1,137 @@
+<div>
+    <nz-spin [nzSpinning]="isSpinning" nzSize="large" nzTip="Working...">
+      <div class="parent">
+        <div class="child">
+          <div nz-row class="imgDiv">
+            <h2 style="margin-left: 230px;">Post Car</h2>
+          </div>
+  
+          <form nz-form [formGroup]="postCarForm" (ngSubmit)="postCar()">
+            <div nz-row [nzGutter]="16">
+              <!-- Brand -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Brand</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <nz-select
+                      nzShowSearch
+                      nzAllowClear
+                      nzPlaceHolder="Select a Brand Name"
+                      formControlName="brand"
+                    >
+                      <nz-option
+                        *ngFor="let brand of listOfBrand"
+                        [nzLabel]="brand"
+                        [nzValue]="brand"
+                      ></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Name -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Name</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <input nz-input placeholder="Enter name" formControlName="name" />
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Type -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Type</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <nz-select nzPlaceHolder="Select a type" formControlName="type">
+                      <nz-option
+                        *ngFor="let type of listOfTyepe"
+                        [nzLabel]="type"
+                        [nzValue]="type"
+                      ></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Color -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Color</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <nz-select nzPlaceHolder="Select a color" formControlName="color">
+                      <nz-option
+                        *ngFor="let color of listOfColor"
+                        [nzLabel]="color"
+                        [nzValue]="color"
+                      ></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Transmission -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Transmission</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <nz-select nzPlaceHolder="Select transmission" formControlName="transmission">
+                      <nz-option
+                        *ngFor="let trans of listOfTranssmission"
+                        [nzLabel]="trans"
+                        [nzValue]="trans"
+                      ></nz-option>
+                    </nz-select>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Year -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Year</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <input nz-input type="number" placeholder="Enter year" formControlName="year" />
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Price -->
+              <div nz-col nzSpan="12">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Price</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <input nz-input type="number" placeholder="Enter price" formControlName="price" />
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Description -->
+              <div nz-col nzSpan="24">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Description</nz-form-label>
+                  <nz-form-control nzHasFeedback [nzXs]="24" nzErrorTip="This field is required">
+                    <textarea
+                      nz-input
+                      rows="4"
+                      placeholder="Enter car description"
+                      formControlName="description"
+                    ></textarea>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+  
+              <!-- Submit Button -->
+              <div nz-col nzSpan="24" style="text-align: center; margin-top: 20px;">
+                <button nz-button nzType="primary" [disabled]="postCarForm.invalid" htmlType="submit">
+                  Post Car
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nz-spin>
+  </div>
+  

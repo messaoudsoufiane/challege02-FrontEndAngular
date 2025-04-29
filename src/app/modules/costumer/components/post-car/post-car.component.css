@@ -1,0 +1,58 @@
+/* Centrage général */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+  }
+  
+  /* Conteneur principal du formulaire */
+  .child {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  /* Titre */
+  .imgDiv h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #1890ff;
+  }
+  
+  /* Espacement entre les champs */
+  nz-form-item {
+    margin-bottom: 24px;
+  }
+  
+  /* Ajustement des labels */
+  nz-form-label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  /* Bouton centré */
+  button[nz-button] {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  /* Responsive sur mobile */
+  @media (max-width: 768px) {
+    .child {
+      padding: 30px 20px;
+    }
+  
+    button[nz-button] {
+      width: 100%;
+    }
+  }
+  

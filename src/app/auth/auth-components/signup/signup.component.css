@@ -1,0 +1,119 @@
+/* Général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F8F8F8;
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.parent {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.child {
+    width: 100%;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Formulaire */
+.nz-form-item {
+    margin-bottom: 15px;
+}
+
+.nz-form-control {
+    width: 100%;
+}
+
+input[nz-input] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 5px 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[nz-input]:focus {
+    border-color: #40a9ff;
+    outline: none;
+}
+
+/* Messages d'erreur */
+.nz-form-control .ant-form-item-explain {
+    color: #f5222d;
+    font-size: 12px;
+}
+
+.nz-form-control .ant-form-item-explain-error {
+    color: #f5222d;
+}
+
+/* Bouton */
+button[nz-button] {
+    width: 100%;
+    padding: 12px;
+    background-color: #1890ff;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+button[nz-button]:hover {
+    background-color: #40a9ff;
+}
+
+/* Lien */
+a {
+    color: #1890ff;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Chargement (Spin) */
+.nz-spin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .parent {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
